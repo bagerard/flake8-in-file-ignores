@@ -1,0 +1,17 @@
+include flake8_plugin.py
+
+include .python-version
+include *.yml
+include *.yaml
+
+include AUTHORS.rst
+include CHANGELOG.rst
+include CONTRIBUTING.rst
+include LICENSE
+include README.md
+
+include *.py
+include makefile
+recursive-include tests *.py
+
+global-exclude *.py[cod] __pycache__ *.so *.dylib

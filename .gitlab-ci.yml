@@ -1,0 +1,36 @@
+stages:
+  - test
+
+variables:
+  PIP_CACHE_DIR: $CI_PROJECT_DIR/.cache/pip
+  PRE_COMMIT_HOME: ${CI_PROJECT_DIR}/.cache/pre-commit
+
+cache:
+  paths:
+    - .cache/pip
+    - .cache/pre-commit
+
+.test: &test
+  stage: test
+  only:
+    refs:
+      - master
+      - /^release\/.*$/
+      - merge_requests
+  script:
+    - pip install -r requirements_dev.txt
+    - pytest --cov-branch --no-cov-on-fail --cov-report=html --cov-report=term:skip-covered -vv --cov cp_flake8_test_name
+  coverage: '/^TOTAL.+?(\d+\%)$/'
+  tags:
+    - docker
+
+lint:
+  <<: *test
+  image: $CONTAINER_REGISTRY/pre-commit-base:0.0.5
+  script:
+    - pip install -r requirements_dev.txt
+    - pre-commit run -a
+
+test_py39:
+  <<: *test
+  image: python:3.9-slim
