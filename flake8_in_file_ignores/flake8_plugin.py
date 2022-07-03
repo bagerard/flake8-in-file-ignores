@@ -2,7 +2,7 @@ import glob
 from typing import List
 
 # metadata
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 CODE_PREFIX = "IFI"  # stands for "In File Ignores"
 
 
@@ -28,7 +28,7 @@ def build_pfi_str(filepath: str, error_codes_csv: str):
 def get_cwd_pfi_noqa() -> List[str]:
     pfi_noqa_item = []
     for file_path in get_cwd_py_files():
-        print(f"Checking {file_path}")
+        # print(f"Checking {file_path}")
         first_line = read_first_line(file_path)
         if IFI_TAG in first_line:
             error_codes = parse_ifi_error_codes(first_line)
@@ -65,11 +65,12 @@ class MyFlake8Plugin:
             prev_pfi = options.per_file_ignores
             concat_pfi = " ".join(pfi_noqa_strs)
             options.per_file_ignores += " " + concat_pfi
-            print(
-                f"flake8-in-file-ignores - Patching options.per_file_ignores from `{prev_pfi}` to `{options.per_file_ignores}`"
-            )
+            # print(
+            #     f"flake8-in-file-ignores - Patching options.per_file_ignores from `{prev_pfi}` to `{options.per_file_ignores}`"
+            # )
         else:
-            print(f"flake8-in-file-ignores - No match found")
+            # print(f"flake8-in-file-ignores - No match found")
+            pass
 
     def run(self):
         yield from []
