@@ -1,5 +1,4 @@
 import glob
-import os
 from typing import List
 
 # metadata
@@ -43,7 +42,9 @@ def parse_ifi_error_codes(line: str) -> str:
     to extract the code
     """
     if IFI_FULL_TAG not in line:
-        raise Exception(f"flake8-in-file-ignores plugin expects to find `{IFI_FULL_TAG}`, which is different from what it found on line `{line}`")
+        raise Exception(
+            f"flake8-in-file-ignores plugin expects to find `{IFI_FULL_TAG}`, which is different from what it found on line `{line}`"
+        )
 
     line = line.replace(IFI_FULL_TAG, "")
     return line.replace(" ", "").strip()
