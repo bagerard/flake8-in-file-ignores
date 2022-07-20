@@ -19,7 +19,7 @@ This plugin will scan your project files and look for lines similar to the follo
 This plugin abuse the `parse_options` feature of flake8 to update the `per-file-ignores` config at that moment.
 
 It scans your project to find the `# flake8-in-file-ignores: noqa:` lines and updates
-the existing `per-file-ignores` options. It does all that before any checks actual run.
+the existing `per-file-ignores` options. It does all that before any checks actually run.
 
 ## Error codes
 
