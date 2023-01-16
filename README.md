@@ -28,5 +28,8 @@ This plugin uses `IFI` as error code (but it will never raise any error)
 
 ## Changes
 
-[0.0.1] - 2022-07-02
+[0.0.2]
+* Fix to project doc
+
+[0.0.1]
 * Initial release
