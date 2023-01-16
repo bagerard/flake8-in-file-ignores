@@ -1,6 +1,9 @@
+[![flake8-test-name-CI](https://github.com/bagerard/flake8-in-file-ignores/actions/workflows/github-actions.yml/badge.svg)](https://github.com/bagerard/flake8-in-file-ignores/actions/workflows/github-actions.yml)
+[![PyPI version](https://img.shields.io/pypi/v/flake8-in-file-ignores.svg)](https://pypi.org/project/flake8-in-file-ignores/)
+
 # Flake8 plugin for in-file-ignores
 
-An extension for `Flake8 <https://pypi.python.org/pypi/flake8>`_ that allows to specify per-file-ignores
+An extension for [Flake8](https://pypi.python.org/pypi/flake8) that allows to specify per-file-ignores
 in the actual file instead of having to specify them in the flake8 config (the built-in way).
 
 ## Installation
