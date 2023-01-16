@@ -31,8 +31,8 @@ This plugin uses `IFI` as error code (but it will never raise any error)
 
 ## Changes
 
-[v0.2.1]
-* Fix to project doc
+[v0.2.x]
+* Fix and pypi doc improvement
 
 [0.0.1]
 * Initial release

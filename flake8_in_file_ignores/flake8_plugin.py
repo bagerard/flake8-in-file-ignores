@@ -2,7 +2,7 @@ import glob
 from typing import List
 
 # metadata
-__version__ = "0.2.1"
+__version__ = "0.2.2"
 CODE_PREFIX = "IFI"  # stands for "In File Ignores"
 
 
