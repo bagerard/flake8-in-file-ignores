@@ -36,7 +36,7 @@ setup(
     keywords="flake8 per-file-ignores",
     maintainer="Bastien Gerard",
     maintainer_email="bast.gerard@gmail.com",
-    url="https://gitlab.cluepoints.com/rbx-wp/lib/cp-flake8-testing-convention",
+    url="https://github.cluepoints.com/rbx-wp/lib/cp-flake8-testing-convention",
     license="MIT License",
     packages=find_packages(),
     zip_safe=False,
