@@ -15,7 +15,7 @@ def get_cwd_py_files() -> List[str]:
 
 
 def read_first_line(filepath: str) -> str:
-    with open(filepath) as f:
+    with open(filepath, errors="ignore") as f:
         first_line = f.readline().rstrip()
     return first_line
 
@@ -60,6 +60,7 @@ class MyFlake8Plugin:
 
     @classmethod
     def parse_options(cls, option_manager, options, args):
+        # print(option_manager, options, args)
         pfi_noqa_strs = get_cwd_pfi_noqa()
         if pfi_noqa_strs:
             prev_pfi = options.per_file_ignores

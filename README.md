@@ -31,6 +31,9 @@ This plugin uses `IFI` as error code (but it will never raise any error)
 
 ## Changes
 
+[v0.2.3]
+* Fix issue with non-utf8 first line in the files (UnicodeDecodeError) #3
+
 [v0.2.x]
 * Fix and pypi doc improvement
 
