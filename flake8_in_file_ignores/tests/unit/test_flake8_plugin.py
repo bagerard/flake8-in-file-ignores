@@ -26,6 +26,6 @@ def test_parse_ifi_error_codes():
     )
 
 
-def test_read_first_line():
+def test_read_first_line_on_file_with_non_utf8_content():
     line = read_first_line(non_utf8_module_path)
-    assert line == "# Some Traditional Chinese characters: ?@?????r??"
+    assert line == "# -*- coding: big5 -*-"
