@@ -1,7 +1,7 @@
 from typing import List
 
 # metadata
-__version__ = "0.2.3"
+__version__ = "0.3.0"
 
 from flake8.discover_files import expand_paths
 
